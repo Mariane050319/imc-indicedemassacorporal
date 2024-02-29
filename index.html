@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indice de Massa Corporal</title>
+    <style>
+        body{
+            background: rgb(58,132,180);
+            background: linear-gradient(90deg, rgba(58,132,180,1) 0%, rgba(51,154,134,0.505922165820643) 65%, rgba(56,130,153,0.5102415966386555) 100%);
+            text-align: center;
+            color: #3c00ff;
+
+        }
+
+        h1{
+            font-size: 45px;
+            font-family:sans-serif;
+            color:blue;
+        }
+        h2{
+            font-size: 40px;
+            color: blue;
+            font-family: sans-serif;
+
+        }
+        p{
+            font-size: 25px;
+            font-family: sans-serif;
+            color: aliceblue;
+        }
+        button{
+            font-family: sans-serif;
+            font-size: 20px; 
+        }
+        input{
+            background-color:rgb(196, 243, 210) ;
+            border-radius: 6em;
+            margin: 10px;
+        }
+        footer{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: blue;
+        }
+     @media{
+        body{
+            background: rgb(58,132,180);
+            background: linear-gradient(90deg, rgba(58,132,180,1) 0%, rgba(51,154,134,0.505922165820643) 65%, rgba(56,130,153,0.5102415966386555) 100%);
+            text-align: center;
+            color: #3c00ff;
+
+        }
+
+        h1{
+            font-size: 45px;
+            font-family:sans-serif;
+            color:blue;
+        }
+        h2{
+            font-size: 40px;
+            color: blue;
+            font-family: sans-serif;
+
+        }
+        img{
+            height: 300px;
+            width: 300px;
+        }
+        p{
+            font-size: 25px;
+            font-family: sans-serif;
+            color: aliceblue;
+        }
+        button{
+            font-family: sans-serif;
+            font-size: 20px; 
+        }
+        input{
+            background-color:rgb(196, 243, 210) ;
+            border-radius: 6em;
+            margin: 10px;
+        }
+        footer{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: blue;
+        }
+     }
+        
+    </style>
+</head>
+<body>
+    <h1>IMC- Indice de Massa Corporal</h1>
+     <p>IMC significa Índice de Massa Corporal. É uma medida utilizada para avaliar se uma pessoa está dentro de faixas consideradas saudáveis de peso em relação à sua altura. O cálculo do IMC é feito dividindo o peso da pessoa (em quilogramas) pelo quadrado da altura (em metros). </p>
+     
+    <form action="">
+        <label for="altura">Altura:</label>
+        <input type="number" name="" id="altura">
+        <br>
+
+        <label for="peso">Peso (Kg)</label>
+        <input type="number" name="" id="peso" maxlength="5">
+        <br>
+
+        <button onclick="calcularImc()">Calculadora IMC</button>
+        <br>
+
+        <p>Seu indice da massa corporal é: <span id="resultado"></span></p>
+    </form>
+
+    <script>
+        
+        function calcularImc(){
+            const peso = document.getElementById('peso').value;
+            const altura = document.getElementById('altura').value;
+            const imc = peso / (altura ** 2);
+            document.getElementById('resultado').textContent
+= imc.toFixed(2);  
+
+var mensagem = "";
+if (imc < 18.5){
+    mensagem = ".Baixo Peso";
+}
+else if (imc <= 24.9){
+    mensagem = ".Peso Normal";
+}
+else if (imc <= 29.9){
+    mensagem = " .Sobrepeso";
+}
+else {
+    mensagem = ".obesidade";
+} document.getElementById ('resultado'). textContent += mensagem;
+}
+
+
+    </script>
+<img src="imc.png" alt="">
+<h2>Para melhorar o IMC, pode tentar:</h2>
+<P>-Ter uma alimentação equilibrada.</P>
+<p>-Praticar exercícios físicos.</p>
+<p>-Consultar um médico.</p>
+<p>-Ter o suporte de um nutricionista.</p>
+<p>-Evitar o sedentarismo.</p>
+<p>-Apostar na reeducação emocional.</p>
+<p>-Beber mais água.</p>
+<p>-Controlar o consumo em excesso de sal e açúcar.</p>
+<p>-Beber pelo menos dois litros de água diariamente.</p>
+<footer>Desenvolvido por Mariane da Silva</footer>
+</body>
+</html>
